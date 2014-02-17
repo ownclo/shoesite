@@ -1,0 +1,24 @@
+Default: &defaults
+  user: shoesite
+  password: shoesite
+  host: localhost
+  port: 5432
+  database: shoesite
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: shoesite_test
+  <<: *defaults
+
+Staging:
+  database: shoesite_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: shoesite_production
+  poolsize: 100
+  <<: *defaults
