@@ -1,0 +1,2 @@
+<h1> That's what you've posted:
+<p>#{postedText}#{reversed}
