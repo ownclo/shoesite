@@ -1,0 +1,13 @@
+<dl class="gallery">
+  <dt>Description
+  <dd>#{shoeDescription shoe}
+  <dt>Color
+  <dd>#{shoeColor shoe}
+  <dt>Size
+  <dd>#{shoeSize shoe}
+  <dt>Photo
+  <dd>
+    <img src=#{".." </> fullName shoeId}>
+
+<form method=post action=@{DeleteShoeR shoeId}>
+  <input type=submit value="Delete">

@@ -12,5 +12,10 @@ Article
     title Text
     content Html
     deriving
+Shoe
+    description Text
+    color Text
+    size Text
+    UniqueShoe description color size
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)

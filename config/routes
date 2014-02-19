@@ -9,3 +9,7 @@
 /mirror MirrorR GET POST
 /blog BlogR GET POST
 /blog/#ArticleId ArticleR GET
+
+/shoes ShoesR GET POST
+/shoes/#ShoeId ShoeR GET DELETE
+/shoes/delete/#ShoeId DeleteShoeR POST
