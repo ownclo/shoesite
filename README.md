@@ -14,6 +14,7 @@ Write a FastCGI or HTTP server in Haskell that provides a restful API for managi
 POST new shoes as a JSON body, with attributes "description", "color", "size", and "photo".
 The "photo" attribute should be a base-64 encoded string representing a JPEG image (think "data URI").
 For example,
+
     {"description": "SADIE Faux Suede Heels with Bow",
      "color": "red",
      "size": "35",
