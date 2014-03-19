@@ -80,6 +80,7 @@ library
                  , base64-bytestring
                  , errors
                  , filepath                      >= 1.3
+                 , lifted-base                   >= 0.2        && < 0.3
 
 executable         shoesite
     if flag(library-only)

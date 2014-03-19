@@ -9,7 +9,7 @@ module Handler.Shoe
 where
 
 import Import
-import Settings.PhotoPath( fullName )
+import Settings.PhotoPath( shoePhotoPath )
 import System.FilePath( (</>) )
 
 import System.Directory
@@ -21,12 +21,15 @@ getShoeR shoeId = do
     shoe <- runDB $ get404 shoeId
     defaultLayout $ do
         setTitle . toHtml $ shoeDescription shoe
+        -- XXX: Need to explicitly prepend ".." to photo path,
+        --      otherwise it tries to go to "shoe/....". Can it
+        --      be easily fixed?
         $(widgetFile "shoe")
 
 deleteShoeR :: ShoeId -> Handler ()
 deleteShoeR shoeId = do
     runDB $ delete shoeId
-    liftIO . removeIfExists $ fullName shoeId
+    liftIO . removeIfExists $ shoePhotoPath shoeId
 
     setMessage "Successfully deleted"
     redirect ShoesR

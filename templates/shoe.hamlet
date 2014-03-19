@@ -7,7 +7,7 @@
   <dd>#{shoeSize shoe}
   <dt>Photo
   <dd>
-    <img src=#{".." </> fullName shoeId}>
+    <img src=#{".." </> shoePhotoPath shoeId}>
 
 <form method=post action=@{DeleteShoeR shoeId}>
   <input type=submit value="Delete">

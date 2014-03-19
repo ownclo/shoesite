@@ -1,5 +1,5 @@
 module Settings.PhotoPath
-    ( fullName
+    ( shoePhotoPath
     )
 where
 
@@ -17,5 +17,5 @@ photoName shoeId = "shoe" <> extractKey (unKey shoeId)
           extractKey _ = error "MIGRATION TO MONGO SHALL NOT BE PAINLESS :)\n"
                             ++ "extractKey expects PersistInt64"
 
-fullName :: ShoeId -> FilePath
-fullName shoeId = photoPath </> photoName shoeId <.> "jpg"
+shoePhotoPath :: ShoeId -> FilePath
+shoePhotoPath shoeId = photoPath </> photoName shoeId <.> "jpg"
