@@ -35,7 +35,7 @@ which is an assumed persistency layer. You'll need something like this:
 
     $ sudo -u postgres psql
     postgres=# CREATE USER shoesite WITH password 'shoesite';
-    postgres=# CREATE DATABASE shoesite_test WITH OWNER shoesite;
+    postgres=# CREATE DATABASE shoesite WITH OWNER shoesite;
 
 
 No unnecesary feature of yesod developping mode (hot code rebuilding,
